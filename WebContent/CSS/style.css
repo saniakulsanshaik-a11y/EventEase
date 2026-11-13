@@ -1,0 +1,168 @@
+:root{
+  --primary:#4f46e5;
+  --primary-dark:#4338ca;
+  --danger:#dc2626;
+  --bg:#f1f5f9;
+  --card:#ffffff;
+  --text:#1e293b;
+  --muted:#64748b;
+  --border:#e2e8f0;
+}
+
+*{box-sizing:border-box}
+
+body{
+  font-family:'Segoe UI',Roboto,Arial,sans-serif;
+  background:linear-gradient(135deg,#eef2ff 0%,#f1f5f9 100%);
+  color:var(--text);
+  margin:0;
+  min-height:100vh;
+}
+
+h2{margin-top:0}
+a{color:var(--primary);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* Navigation */
+nav{
+  background:linear-gradient(90deg,#4f46e5,#7c3aed);
+  padding:14px 28px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  position:sticky;
+  top:0;
+  z-index:10;
+  box-shadow:0 2px 10px rgba(79,70,229,.35);
+}
+nav a{
+  color:#fff;
+  padding:7px 14px;
+  border-radius:6px;
+  font-weight:500;
+  margin:0;
+}
+nav a:hover{background:rgba(255,255,255,.2);text-decoration:none}
+
+/* Cards / forms */
+.box{
+  max-width:400px;
+  margin:60px auto;
+  background:var(--card);
+  padding:32px;
+  border-radius:14px;
+  box-shadow:0 10px 30px rgba(15,23,42,.10);
+}
+.wide{max-width:620px;margin-top:35px}
+.box h2{text-align:center;color:var(--primary);margin-bottom:18px}
+
+input,select,textarea{
+  width:100%;
+  padding:11px 12px;
+  margin:6px 0 14px;
+  border:1px solid var(--border);
+  border-radius:8px;
+  font-size:15px;
+  font-family:inherit;
+  background:#f8fafc;
+}
+input:focus,select:focus,textarea:focus{
+  outline:none;
+  border-color:var(--primary);
+  background:#fff;
+  box-shadow:0 0 0 3px rgba(79,70,229,.15);
+}
+
+/* Buttons */
+button,.btn{
+  background:var(--primary);
+  color:#fff;
+  border:0;
+  padding:11px 20px;
+  border-radius:8px;
+  font-size:15px;
+  font-weight:600;
+  cursor:pointer;
+  text-decoration:none;
+  display:inline-block;
+  transition:.2s;
+}
+button:hover,.btn:hover{
+  background:var(--primary-dark);
+  transform:translateY(-1px);
+  text-decoration:none;
+}
+.box form button[type=submit]{width:100%}
+.red{background:var(--danger)}
+.red:hover{background:#b91c1c}
+table button{width:auto !important;padding:6px 14px;font-size:14px}
+
+/* Messages */
+.err{color:var(--danger)}
+.ok{color:#16a34a}
+.msg{text-align:center;font-weight:600;min-height:20px}
+
+/* Tables */
+table{
+  width:92%;
+  max-width:1100px;
+  margin:25px auto;
+  border-collapse:separate;
+  border-spacing:0;
+  background:var(--card);
+  border-radius:12px;
+  box-shadow:0 6px 20px rgba(15,23,42,.08);
+  overflow:hidden;
+}
+th,td{padding:13px 14px;text-align:left;border-bottom:1px solid var(--border)}
+th{background:#eef2ff;color:var(--primary-dark);font-size:13px;text-transform:uppercase;letter-spacing:.5px}
+tr:last-child td{border-bottom:0}
+tbody tr:hover td,tr:hover td{background:#f8fafc}
+
+/* Dashboard cards */
+.cards{display:flex;gap:20px;justify-content:center;margin:25px;flex-wrap:wrap}
+.card{
+  background:var(--card);
+  padding:24px 40px;
+  border-radius:14px;
+  box-shadow:0 6px 20px rgba(15,23,42,.08);
+  text-align:center;
+  min-width:190px;
+  color:var(--muted);
+  border-top:4px solid var(--primary);
+}
+.card h1{margin:0 0 5px;color:var(--primary);font-size:40px}
+
+@media(max-width:700px){
+  table{font-size:13px;display:block;overflow-x:auto}
+  .box{margin:30px 15px;padding:22px}
+  nav{padding:10px 14px}
+}
+.hero{
+  background:linear-gradient(135deg,#4f46e5,#7c3aed);
+  color:#fff;
+  text-align:center;
+  padding:80px 20px 90px;
+}
+.hero h1{font-size:40px;margin:0 0 12px}
+.hero p{font-size:18px;margin:0 auto 28px;max-width:560px;opacity:.9}
+.hero .btn{margin:6px;padding:13px 26px;font-size:16px}
+.btn-light{background:#fff;color:var(--primary)}
+.btn-light:hover{background:#eef2ff;color:var(--primary-dark)}
+.btn-outline{background:transparent;border:2px solid #fff;color:#fff}
+.btn-outline:hover{background:rgba(255,255,255,.15)}
+
+.features{
+  display:flex;gap:20px;justify-content:center;flex-wrap:wrap;
+  max-width:1000px;margin:-45px auto 30px;padding:0 20px;
+}
+.feature{
+  background:var(--card);border-radius:14px;padding:24px;
+  flex:1;min-width:240px;max-width:300px;text-align:center;
+  box-shadow:0 8px 24px rgba(15,23,42,.10);
+}
+.feature h3{margin:10px 0 6px;color:var(--primary)}
+.feature p{margin:0;color:var(--muted);font-size:14px}
+.feature .icon{font-size:34px}
+
+.footer{text-align:center;color:var(--muted);font-size:14px;padding:20px}
